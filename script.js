@@ -11,28 +11,44 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection.toLowerCase() === computerSelection.toLowerCase()) {
-        return "Draw! Play again"
+        playerScore += 0
+        computerScore += 0
     } else if (playerSelection.toLowerCase() === "rock") {
         if (computerSelection.toLowerCase() === "scissors") {
-            return "You win! Rock beats Scissors"
+            playerScore += 1
         } else {
-            return "You lose! Paper beats Rock"
+            computerScore += 1
         }
     } else if (playerSelection.toLowerCase() === "paper") {
         if (computerSelection.toLowerCase() === "rock") {
-            return "You win! Paper beats Rock"
+            playerScore += 1
         } else {
-            return "You lose! Scissors beats Paper"
+            computerScore += 1
         }
     } else {
         if (computerSelection.toLowerCase() === "paper") {
-            return "You win! Scissors beats Paper"
+            playerScore += 1
         } else {
-            return "You lose! Rock beats Scissors"
+            computerScore += 1
         }
     }
 }
 
-const playerSelection = "Paper"
-const computerSelection = computerPlay()
-console.log(playRound(playerSelection, computerSelection))
+function game() {
+    for (let i = 0; i < 5; i++) {
+        const playerSelection = prompt("What's your choice?").toLowerCase()
+        const computerSelection = computerPlay()
+        playRound(playerSelection, computerSelection)
+    }
+    if (playerScore === computerScore) {
+        alert("Draw! Nobody wins")
+    } else if (playerScore > computerScore) {
+        alert("You win!")
+    } else {
+        alert("You lose!")
+    }
+}
+
+let playerScore = 0
+let computerScore = 0
+game()
