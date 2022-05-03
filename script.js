@@ -21,25 +21,37 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection.toLowerCase() === "rock") {
         if (computerSelection.toLowerCase() === "scissors") {
             playerScore += 1
+            userTable.textContent = playerScore
+            computerTable.textContent = computerScore
             winner.textContent = "You win!"
         } else {
             computerScore += 1
+            userTable.textContent = playerScore
+            computerTable.textContent = computerScore
             winner.textContent = "You lose"
         }
     } else if (playerSelection.toLowerCase() === "paper") {
         if (computerSelection.toLowerCase() === "rock") {
             playerScore += 1
+            userTable.textContent = playerScore
+            computerTable.textContent = computerScore
             winner.textContent = "You win!"
         } else {
             computerScore += 1
+            userTable.textContent = playerScore
+            computerTable.textContent = computerScore
             winner.textContent = "You lose"
         }
     } else {
         if (computerSelection.toLowerCase() === "paper") {
             playerScore += 1
+            userTable.textContent = playerScore
+            computerTable.textContent = computerScore
             winner.textContent = "You win!"
         } else {
             computerScore += 1
+            userTable.textContent = playerScore
+            computerTable.textContent = computerScore
             winner.textContent = "You lose"
         }
     }
@@ -66,6 +78,8 @@ const scissorsBtn = document.getElementById("scissors")
 const userChoice = document.getElementById("userChoice")
 const computerChoice = document.getElementById("computerChoice")
 const winner = document.getElementById("winner")
+const userTable = document.getElementById("userScore")
+const computerTable = document.getElementById("computerScore")
 
 rockBtn.addEventListener('click', () => {
     userChoice.textContent = "Your choice:"
