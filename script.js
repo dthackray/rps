@@ -17,23 +17,30 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection.toLowerCase() === computerSelection.toLowerCase()) {
         playerScore += 0
         computerScore += 0
+        winner.textContent = "Draw! Nobody wins"
     } else if (playerSelection.toLowerCase() === "rock") {
         if (computerSelection.toLowerCase() === "scissors") {
             playerScore += 1
+            winner.textContent = "You win!"
         } else {
             computerScore += 1
+            winner.textContent = "You lose"
         }
     } else if (playerSelection.toLowerCase() === "paper") {
         if (computerSelection.toLowerCase() === "rock") {
             playerScore += 1
+            winner.textContent = "You win!"
         } else {
             computerScore += 1
+            winner.textContent = "You lose"
         }
     } else {
         if (computerSelection.toLowerCase() === "paper") {
             playerScore += 1
+            winner.textContent = "You win!"
         } else {
             computerScore += 1
+            winner.textContent = "You lose"
         }
     }
 }
@@ -58,6 +65,7 @@ const paperBtn = document.getElementById("paper")
 const scissorsBtn = document.getElementById("scissors")
 const userChoice = document.getElementById("userChoice")
 const computerChoice = document.getElementById("computerChoice")
+const winner = document.getElementById("winner")
 
 rockBtn.addEventListener('click', () => {
     userChoice.textContent = "Your choice:"
