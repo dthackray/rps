@@ -1,10 +1,14 @@
 function computerPlay() {
     const choiceNum = Math.floor(Math.random() * 3) + 1
+    computerChoice.textContent  = "Computer choice:"
     if (choiceNum === 1) {
+        computerChoice.textContent += " Rock"
         return "Rock"
     } else if (choiceNum === 2) {
+        computerChoice.textContent += " Paper"
         return "Paper"
     } else {
+        computerChoice.textContent += " Scissors"
         return "Scissors"
     }
 }
@@ -52,16 +56,21 @@ function game() {
 const rockBtn = document.getElementById("rock")
 const paperBtn = document.getElementById("paper")
 const scissorsBtn = document.getElementById("scissors")
+const userChoice = document.getElementById("userChoice")
+const computerChoice = document.getElementById("computerChoice")
 
 rockBtn.addEventListener('click', () => {
+    userChoice.textContent += " Rock"
     playRound("rock", computerPlay())
   });
 
 paperBtn.addEventListener('click', () => {
+    userChoice.textContent += " Paper"
     playRound("paper", computerPlay())
   });
 
 scissorsBtn.addEventListener('click', () => {
+    userChoice.textContent += " Scissors"
     playRound("scissors", computerPlay())
   });
 
