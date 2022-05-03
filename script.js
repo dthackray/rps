@@ -55,6 +55,11 @@ function playRound(playerSelection, computerSelection) {
             winner.textContent = "You lose"
         }
     }
+    if (playerScore === 5) {
+        gameWinner.textContent = "You win the game!"
+    } else if (computerScore === 5) {
+        gameWinner.textContent = "You lose the game!"
+    }
 }
 
 function game() {
@@ -80,6 +85,7 @@ const computerChoice = document.getElementById("computerChoice")
 const winner = document.getElementById("winner")
 const userTable = document.getElementById("userScore")
 const computerTable = document.getElementById("computerScore")
+const gameWinner = document.getElementById("gameWinner")
 
 rockBtn.addEventListener('click', () => {
     userChoice.textContent = "Your choice:"
@@ -101,3 +107,4 @@ scissorsBtn.addEventListener('click', () => {
 
 let playerScore = 0
 let computerScore = 0
+
