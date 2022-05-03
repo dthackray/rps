@@ -36,7 +36,7 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
     for (let i = 0; i < 5; i++) {
-        const playerSelection = prompt("What's your choice?").toLowerCase()
+        // const playerSelection = 
         const computerSelection = computerPlay()
         playRound(playerSelection, computerSelection)
     }
@@ -48,6 +48,22 @@ function game() {
         alert("You lose!")
     }
 }
+
+const rockBtn = document.querySelector("#rock")
+const paperBtn = document.querySelector("#paper")
+const scissorsBtn = document.querySelector("#scissors")
+
+rockBtn.addEventListener('click', () => {
+    alert("Hello World");
+  });
+
+paperBtn.addEventListener('click', () => {
+    alert("Hello World");
+  });
+
+scissorsBtn.addEventListener('click', () => {
+    alert("Hello World");
+  });
 
 let playerScore = 0
 let computerScore = 0
