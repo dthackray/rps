@@ -54,17 +54,16 @@ const paperBtn = document.getElementById("paper")
 const scissorsBtn = document.getElementById("scissors")
 
 rockBtn.addEventListener('click', () => {
-    alert("Hello World");
+    playRound("rock", computerPlay())
   });
 
 paperBtn.addEventListener('click', () => {
-    alert("Hello World");
+    playRound("paper", computerPlay())
   });
 
 scissorsBtn.addEventListener('click', () => {
-    alert("Hello World");
+    playRound("scissors", computerPlay())
   });
 
 let playerScore = 0
 let computerScore = 0
-game()
