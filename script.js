@@ -60,16 +60,19 @@ const userChoice = document.getElementById("userChoice")
 const computerChoice = document.getElementById("computerChoice")
 
 rockBtn.addEventListener('click', () => {
+    userChoice.textContent = "Your choice:"
     userChoice.textContent += " Rock"
     playRound("rock", computerPlay())
   });
 
 paperBtn.addEventListener('click', () => {
+    userChoice.textContent = "Your choice:"
     userChoice.textContent += " Paper"
     playRound("paper", computerPlay())
   });
 
 scissorsBtn.addEventListener('click', () => {
+    userChoice.textContent = "Your choice:"
     userChoice.textContent += " Scissors"
     playRound("scissors", computerPlay())
   });
